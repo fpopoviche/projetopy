@@ -112,3 +112,6 @@ print("Resultado final:", resultado) # Exibe 30
 ```
 
 Entender o conceito de **atribuir um resultado a uma variável** é fundamental, pois é o que permite armazenar o estado das coisas e reusá-las em programação.
+
+
+ALTERANDO APENAS ESTAS Linhas
