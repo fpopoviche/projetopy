@@ -1,0 +1,114 @@
+O foco da aula foi entender a **execução de scripts**, a **função `print()`**, o uso do Python como **calculadora** e a introdução ao conceito de **variáveis**.
+
+---
+
+## Resumo da Aula: Primeiros Comandos em Python
+
+### 1. Fundamentos da Execução de Scripts
+
+A programação envolve a manipulação e o processamento de dados através de uma **lista de instruções**. O interpretador Python executa essas instruções da esquerda para a direita e de cima para baixo.
+
+*   **Salvar o Arquivo:** Para que qualquer alteração no script seja reconhecida e executada, é **necessário salvar o arquivo** antes da execução. Caso contrário, os novos comandos digitados não aparecerão.
+*   **Linhas Vazias:** Linhas vazias são simplesmente **ignoradas** pelo interpretador Python e podem ser usadas livremente para melhorar a organização do código.
+
+### 2. A Função `print()` e Strings
+
+A principal instrução aprendida para exibir informações na tela é a função `print()`.
+
+*   **Sintaxe Básica:** O `print()` é uma função que já existe dentro do Python. As informações (dados) que passamos para a função devem estar entre parênteses.
+*   **Strings (Textos):** Um texto que é exibido é chamado de **string**. Para que o Python reconheça algo como uma string, ela deve ser delimitada por **aspas duplas** (ou aspas simples).
+
+#### Exemplo de Código (Exibição de Texto):
+```python
+# A instrução é exibir o texto "olá mundo" na tela
+print("olá mundo") #
+print("Que dia bom") #
+```
+
+*   **Múltiplos Argumentos no `print()`:** É possível exibir múltiplos itens (como strings e resultados de cálculos) na mesma linha, separando-os por uma **vírgula (`,`)**. O Python automaticamente insere um espaço entre cada argumento exibido.
+
+#### Exemplo de Código (Múltiplos Argumentos):
+```python
+print("Meu nome é", "Téo Calvo") #
+# Isso exibirá: Meu nome é Téo Calvo (com um espaço entre os argumentos)
+```
+
+### 3. Comentários e Modo Interativo
+
+#### Comentários
+Comentários são textos que o programador usa para ler e entender o código, mas que são **ignorados** pelo interpretador Python durante a execução.
+
+*   **Comentário Normal:** Usa-se o símbolo de **hashtag (`#`)**.
+*   **Comentário Especial (Células):** Para usar o **modo iterativo** (facilitar o aprendizado e a exploração de código) através da extensão Jupyter, são usados dois símbolos de percentual (`%%`) para **separar células** de código executáveis.
+
+#### Exemplo de Código (Comentários e Células):
+```python
+# Este é um comentário simples para leitura humana
+
+%%
+# Este marcador (%%) divide o código em uma célula executável
+print("Comando da Célula 1")
+```
+
+Para executar uma célula específica, utiliza-se `Control + Enter` ou `Shift + Enter`.
+
+### 4. Python como Calculadora
+
+O Python pode ser usado para realizar **operações matemáticas básicas** (a raiz da Computação).
+
+#### Tipos de Dados Numéricos
+1.  **Inteiros (Integers):** Números sem casas decimais.
+2.  **Float:** Números decimais ou reais (como $2.0$ ou $3.333...$).
+
+#### Operações Matemáticas:
+
+| Operação | Símbolo | Exemplo | Tipo de Resultado | Fonte |
+| :--- | :--- | :--- | :--- | :--- |
+| **Soma** | `+` | `print(1 + 1)` | Inteiro | |
+| **Subtração** | `-` | `print(10 - 5)` | Inteiro | |
+| **Multiplicação** | `*` | `print(10 * 5)` | Inteiro | |
+| **Divisão Padrão** | `/` | `print(10 / 5)` | **Float** (Ex: 2.0) | |
+| **Divisão Inteira** | `//` | `print(10 // 3)` | Inteiro (Pega só a parte inteira, não arredonda) | |
+| **Resto da Divisão (Módulo)** | `%` | `print(10 % 4)` | Inteiro (Retorna o resto, Ex: 2) | |
+| **Potência** | `**` | `print(3 ** 4)` | Inteiro | |
+
+#### Exemplo de Código (Cálculos):
+```python
+%%
+print("Soma =", 1 + 1) #
+print("Multiplicação =", 10 * 5) #
+print("Divisão (Float) =", 10 / 3) #
+print("Resto =", 10 % 4) #
+```
+
+### 5. Variáveis (O Conceito de Post-it)
+
+Variáveis permitem **armazenar resultados** e reusar dados. No Python, variáveis são melhor entendidas como **"post-its"** que você cola em cima de um objeto (o dado), e não como caixas que guardam o dado.
+
+*   **Atribuição:** Usa-se o sinal de igual (`=`) para atribuir um valor ou o resultado de uma operação a um "post-it" (variável).
+*   **Reuso:** Você pode pegar o mesmo "post-it" e colá-lo em outro objeto, alterando o valor da variável.
+
+#### Exemplo de Código (Variáveis):
+```python
+%%
+# 1. Atribuição de String
+nome = "Téo Calvo" # A variável 'nome' aponta para o objeto "Téo Calvo"
+print("O nome é:", nome) # Exibe "Téo Calvo"
+
+# 2. Atribuição de Operação
+soma = 1 + 1 # A variável 'soma' aponta para o resultado da operação (2)
+print("O resultado da soma é:", soma) #
+
+# 3. Reatribuição (A variável muda de valor/aponta para outro objeto)
+resultado = 10 - 5 # Resultado é 5
+print("Resultado inicial:", resultado) # Exibe 5
+
+resultado = 10 * 2 # O post-it 'resultado' é colado agora em 20
+print("Resultado reatribuído:", resultado) # Exibe 20
+
+# 4. Usando o próprio valor da variável para atualizá-la
+resultado = resultado + 10 # Pega o valor atual (20) e adiciona 10, resultando em 30
+print("Resultado final:", resultado) # Exibe 30
+```
+
+Entender o conceito de **atribuir um resultado a uma variável** é fundamental, pois é o que permite armazenar o estado das coisas e reusá-las em programação.
