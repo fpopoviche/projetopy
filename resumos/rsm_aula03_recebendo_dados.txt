@@ -1,0 +1,25 @@
+Esta aula introdutória focou em como o Python pode receber dados (ou inputs) do usuário e a necessidade de gerenciar o tipo desses dados para realizar operações matemáticas.
+A aula começou com uma breve organização do ambiente de trabalho, criando pastas separadas para os arquivos (dia_01 e dia_02). Foi revisado que o código é sempre executado de cima para baixo seguindo a ordem das instruções, e que a execução pode ser feita de forma iterativa (usando o % em ambientes como o Jupyter) para visualizar trechos do código.
+Recebendo Inputs do Usuário
+O ponto central da aula foi a introdução do método/função input().
+1. A Função Input vs. Print:
+    ◦ Enquanto o método print() é usado para exibir valores na saída padrão (stdout), o método input() é usado para ler uma string (texto) a partir da entrada padrão.
+    ◦ Um exemplo inicial demonstrou como armazenar o nome do usuário: nome = input("Qual o seu nome").
+    ◦ Foi destacado que o print permite concatenar ou exibir múltiplos valores, como variáveis e textos, separando-os por vírgulas.
+2. O Problema da String e a Conversão de Tipo:
+    ◦ Ao tentar calcular o dobro de um número fornecido pelo usuário, a limitação do input() tornou-se evidente: o input() sempre retorna uma string, independentemente de o usuário digitar um número.
+    ◦ A multiplicação de uma string por um número inteiro resulta na replicação da string (ex: "2" multiplicado por 2 resulta em "22").
+    ◦ Para realizar operações matemáticas (como o cálculo do dobro), é essencial que o valor seja convertido explicitamente de string para um tipo numérico, como um inteiro (int).
+3. Conversão Explícita:
+    ◦ A conversão é feita utilizando a função int(). A instrução correta é receber o input (como string) e, em seguida, reatribuir a variável após a conversão: numero = int(numero).
+    ◦ O Python utiliza tipagem dinâmica, permitindo que a mesma variável mude de tipo (neste caso, de string para inteiro).
+4. Lidando com Erros:
+    ◦ Foi demonstrado o "problema do usuário": se o usuário inserir texto (ex: "dois") em vez de dígitos numéricos, o programa falha ao tentar realizar a conversão.
+    ◦ Essa falha resulta em um ValueError (erro de valor), indicando que foi fornecido um "literal inválido" para a conversão para inteiro na base 10. O rastreamento do erro (traceback) aponta a linha exata onde a falha ocorreu.
+Exercícios Práticos
+A aula concluiu com a prática de exercícios para fixar os conceitos de input, print e conversão:
+• Bom Dia e Nome: Combinação simples de print e input para interação básica.
+• História Interativa: Para controlar o fluxo do programa e forçá-lo a pausar (aguardar o usuário pressionar Enter) entre os parágrafos, a função input() é utilizada sem armazenar seu resultado. Notou-se que o próprio input() pode ser usado para exibir o texto do parágrafo, simplificando o código.
+• Cálculo de Raiz Quadrada: O exercício exigiu o uso do input, a conversão para inteiro (int()) e a operação matemática usando exponenciação (** 0.5 ou ** (1/2)) para calcular a raiz.
+• Arredondamento: Para limitar a quantidade de dígitos após a vírgula em resultados de ponto flutuante, utilizou-se a função round(valor, digitos).
+• Cálculo do Dobro: Revisão do fluxo completo: receber valor (string) -> converter para inteiro (int()) -> calcular o dobro.

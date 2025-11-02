@@ -1,0 +1,48 @@
+A Aula 04 focou na introdução das **estruturas de controle de fluxo** (`if`, `elif`, e `else`), essenciais para que o programa possa **selecionar quais linhas de código serão executadas**, ignorando outras, dependendo de uma condição.
+
+Anteriormente, os códigos eram executados em sequência, de cima para baixo, executando absolutamente todas as linhas.
+
+### Tipos de Dados e Condições Lógicas
+
+Antes de introduzir as estruturas de controle, a aula revisou e introduziu os tipos de dados que fundamentam as condições:
+
+1.  **Revisão de Tipos Numéricos:** Foram lembrados os tipos **inteiros** (números sem casas decimais) e **floats** (números com casas decimais).
+2.  **Introdução aos Booleanos:** O tipo **Booleano** foi apresentado. Os booleanos são valores lógicos que assumem apenas dois estados: **verdadeiro** (`True`) ou **falso** (`False`).
+    *   Esses valores podem ser representados, em termos de inteiros, como `0` (Falso) ou `1` ou mais (Verdadeiro).
+    *   No Python, os booleanos são o **resultado de uma operação ou comparação lógica**.
+3.  **Comparações Lógicas:** As comparações (como `>` maior que, `<` menor que, `>=` maior ou igual a, ou `==` igualdade) retornam um valor booleano (`True` ou `False`).
+
+### Estruturas Condicionais
+
+A execução do código agora depende do resultado dessas comparações lógicas.
+
+#### 1. O Comando `if` (Se)
+
+O `if` permite executar um **bloco de código** somente se uma condição for verdadeira:
+
+*   **Finalidade:** A palavra `if` (se) espera receber um valor booleano (`True` ou `False`).
+*   **Sintaxe e Bloco de Código:** A sintaxe exige a palavra `if`, a condição lógica e, em seguida, **dois pontos** (`:`).
+*   **Identação:** O bloco de código pertencente ao `if` deve ser **identado** (afastado por quatro espaços ou "bolinhas"). A identação define o que será executado se a condição for `True`.
+*   **Fluxo:** Se a condição for `False`, o Python **ignora** o bloco de código identado e continua a execução a partir da próxima linha não-identada.
+
+#### 2. O Comando `else` (Senão)
+
+O `else` define um bloco de código que deve ser executado se nenhuma das condições anteriores for atendida:
+
+*   **Pré-requisito:** O `else` **depende da existência de um `if`**.
+*   **Execução Exclusiva:** O bloco `else` só é executado **quando a condição do `if` associado for `False`**.
+*   **Otimização:** Seu uso é importante para otimização de código. Se o `if` for `True`, o Python executa o bloco do `if` e **ignora totalmente o `else`**, evitando testes desnecessários.
+
+#### 3. O Comando `elif` (Senão, Se)
+
+O `elif` permite encadear múltiplas condições exclusivas:
+
+*   **Significado:** `elif` é a abreviação de "else if".
+*   **Encadeamento:** Assim como o `else`, o `elif` não existe sozinho; ele deve nascer a partir de um `if` anterior. É possível ter **zero ou mais** comandos `elif` em uma estrutura.
+*   **Fluxo Encerrado:** O Python testa o `if`. Se for `False`, ele testa o primeiro `elif`. **Assim que encontra a primeira condição que é `True`**, ele executa o bloco de código correspondente e **ignora todo o restante** da estrutura, incluindo outros `elif`s e qualquer `else` final.
+
+### Outras Ferramentas e Práticas
+
+*   **Strings Multilinha:** Para melhorar a exibição de *inputs* com múltiplas opções para o usuário, pode-se usar três aspas duplas (`"""`) para criar *strings* que contêm quebras de linha.
+*   **Controle de Fluxo na Prática:** Demonstrou-se que o uso das estruturas `if/elif/else` é essencial para programas interativos, como no exemplo da sorveteria discutido em nossa conversa, onde as escolhas de preço são mutuamente exclusivas (um item só pode ter um preço).
+*   **Arredondamento:** Para limitar a quantidade de dígitos após a vírgula (em resultados *float*), foi introduzida a função **`round(valor, digitos)`**.
